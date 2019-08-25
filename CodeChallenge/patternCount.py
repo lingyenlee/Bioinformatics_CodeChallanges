@@ -1,5 +1,5 @@
 def PatternCount(text, pattern):
-    """find the freq of a pattern in DNA sequence"""
+    """find the frequency of a pattern in DNA sequence"""
 
     count = 0
     for i in range(0, len(text)-len(pattern)+1):

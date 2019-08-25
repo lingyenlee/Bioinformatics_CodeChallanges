@@ -1,14 +1,13 @@
 from patternCount import PatternCount
 
 def FrequentWords(Text, k):
-    """find the most frequent pattern (k-mers) in Text 
-        given the number of k-mers (k)"""
+    """find the most frequent k-mer pattern in given Text and length of k"""
     # FrequentPatterns = {}
     Count = {}
     for i in range(0, len(Text)-k+1):
         pattern = Text[i:i+k]
         Count[i] = PatternCount(Text, pattern)
-    print(Count)
+    return Count
 
     # if pattern in FrequentPatterns:
     #     FrequentPatterns[pattern] += 1
@@ -20,5 +19,4 @@ def FrequentWords(Text, k):
     # print(FrequentPatterns)
     # print(freq_key)
 
-
-FrequentWords("ACAACTATGCATACTATCGGGAACTATCCT", 5)
+print(FrequentWords("ACAACTATGCATACTATCGGGAACTATCCT", 5))
